@@ -1,13 +1,12 @@
 import React from "react";
-import { productContext } from "./productsContext"
+import Products from "./components/products"
+// import { useApi } from "./components/productsContext"
 
 function App() {
-
-
   return (
-    <React.Fragment>
-      <p> Hello World </p>
-    </React.Fragment>
+    <>
+      <Products/>
+    </>
   );
 }
 
