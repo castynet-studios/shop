@@ -5,7 +5,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #f5f5f5;
-    background-image: url("./static/genztechShopBackground.png");
+    background-image: url("./components/static/genztechShopBackground.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto',
