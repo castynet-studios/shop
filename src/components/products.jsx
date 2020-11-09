@@ -18,16 +18,19 @@ export default function Products() {
               />
               <Title>{products.Title}</Title>
               <Price>KSH {products.JumiaPrice}</Price>
+              <Rate>Buyers Rating {products.BuyersScore}/10</Rate>
             </Wrapper>
           </div>
         ))}
-        <div style={{ width: "250px", height: "0" }}></div>
-        <div style={{ width: "250px", height: "0" }}></div>
-        <div style={{ width: "250px", height: "0" }}></div>
+        <div style={{ width: "220px", height: "0" }}></div>
+        <div style={{ width: "220px", height: "0" }}></div>
+        <div style={{ width: "220px", height: "0" }}></div>
       </Page>
     </>
   );
 }
+
+const Rate = styled.p``;
 
 const Image = styled.img`
   width: 100%;
@@ -45,7 +48,7 @@ const Wrapper = styled.div`
   align-items: center;
   border-radius: 2px;
   background-color: #fff;
-  width: 230px;
+  width: 200px;
   margin: 2%;
   padding: 10px;
 `;
