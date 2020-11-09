@@ -6,7 +6,9 @@ export default function NavBar() {
   return (
     <>
       <Nav>
-        <LogoImg src={Logo} alt="genZtech logo" />
+        <a href="https://shop.genztech.xyz/">
+          <LogoImg src={Logo} alt="genZtech logo" />
+        </a>
       </Nav>
     </>
   );
