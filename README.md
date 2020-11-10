@@ -6,4 +6,4 @@ Curated Collection of the best Priced Electronics you can get Online & from Phys
 
 ## A GenZtech Project
 
-## © 2018 - 2020 Castynet Studios All Rights Reserved
+## © 2018 - 2020 Castynet Studios | All Rights Reserved
