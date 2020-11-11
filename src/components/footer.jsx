@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ExternalLink } from "@styled-icons/heroicons-outline/ExternalLink";
+import { Icons } from "./utilities";
 
 export default function footer() {
   return (
@@ -9,34 +9,40 @@ export default function footer() {
         <LinksWrap>
           <Link>
             Ethics Statement {"  "}
-            <ExternalLink size="20" />
+            <External />
           </Link>
           <Link>
             Get Your Products Listed {"  "}
-            <ExternalLink size="20" />
+            <External />
           </Link>
           <Link>
             Tracking &amp; Privacy Policy {"  "}
-            <ExternalLink size="20" />
+            <External />
           </Link>
           <Link>
             How the Buyers Score is Calculated {"  "}
-            <ExternalLink size="20" />
+            <External />
           </Link>
         </LinksWrap>
         <Tag>GenZtech Shop</Tag>
         <CopyRight>
-          &copy; Castynet Studios 2018 - 2020 | All Rights Reserved
+          &copy; <u>Castynet Studios</u> 2018 - 2020 | All Rights Reserved
         </CopyRight>
       </FooterWrap>
     </>
   );
 }
 
+const External = styled(Icons.ExternalLink)`
+  vertical-align: text-bottom;
+  width: 20px;
+  color: #b700d6;
+`;
+
 const CopyRight = styled.p`
   text-align: center;
-  text-decoration: underline;
   padding: 10px;
+  color: #ff5722;
 `;
 
 const Link = styled.a``;
@@ -56,7 +62,7 @@ const Tag = styled.p`
 `;
 
 const FooterWrap = styled.div`
-  background-color: rgb(228 228 228 / 75%);
+  background-color: rgb(228 228 228 / 80%);
   color: #0c0021;
   box-shadow: 0 -1px 1px rgb(156 39 176 / 0.24),
     0 -1px 1px rgb(156 39 176 / 0.24);
