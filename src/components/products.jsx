@@ -1,6 +1,7 @@
 import React from "react";
 import { useApi } from "./productsContext";
 import styled from "styled-components";
+import { Icons } from "./utilities";
 
 export default function Products() {
   const products = useApi().products;
@@ -18,7 +19,10 @@ export default function Products() {
               />
               <Title>{products.Title}</Title>
               <Price>KSH {products.JumiaPrice}</Price>
-              <Rate>Buyers Rating {products.BuyersScore}/10</Rate>
+              <Rate>
+                Buyers Rating {products.BuyersScore}/10
+                <Icons.DotCircle size="30" />
+              </Rate>
             </Wrapper>
           </div>
         ))}
@@ -58,9 +62,7 @@ const Page = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 3%;
-  padding-top: 3%;
+  padding-top: 2%;
   margin: 0 Auto;
-  border-left: #fff solid 2px;
-  border-right: #fff solid 2px;
   gap: 1%;
 `;
