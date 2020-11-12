@@ -18,7 +18,10 @@ export const ProductProvider = ({ children }) => {
       "https://shop.api.genztech.xyz/api/collections/get/Product?token=9e0994af324faa13be7993a9c45782"
     );
     const data = await rawData.json();
-    setProducts(data.entries);
+    const published = data.entries.filter(function (x) {
+      return x.published === true;
+    });
+    setProducts(published);
   };
 
   return (
