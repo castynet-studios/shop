@@ -12,11 +12,11 @@ export default function QuotesSection() {
         <Insight>
           <p>Some Insight;</p>
           <Flame />
-          {"  "}Best Value,{"  "}
+          {"  "}Excellent Value,{"  "}
           <Heart />
           {"  "}Good Value,{"  "}
           <Check />
-          {"  "}Works as Expected
+          {"  "}Satisfactory
         </Insight>
       </QuoteWrap>
     </>
@@ -54,7 +54,7 @@ const Heart = styled(Icons.Heart)`
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 `;
 
-const Insight = styled.p`
+const Insight = styled.div`
   background-color: #fff;
   padding: 12px 20px;
 
