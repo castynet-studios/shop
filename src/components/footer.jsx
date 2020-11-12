@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icons } from "./utilities";
+import { Year } from "./helpers";
 
 export default function footer() {
   return (
@@ -26,7 +27,7 @@ export default function footer() {
         </LinksWrap>
         <Tag>GenZtech Shop</Tag>
         <CopyRight>
-          &copy; <u>Castynet Studios</u> 2018 - 2020 | All Rights Reserved
+          &copy; <u>Castynet Studios</u> 2018 - {Year()} | All Rights Reserved
         </CopyRight>
       </FooterWrap>
     </>
