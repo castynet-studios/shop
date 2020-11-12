@@ -1,14 +1,16 @@
 import { RadioCircleMarked } from "@styled-icons/boxicons-regular/RadioCircleMarked";
 import { ExternalLink } from "@styled-icons/heroicons-outline/ExternalLink";
-import { BoltCircle } from "@styled-icons/boxicons-regular/BoltCircle";
-import { CheckCircle } from "@styled-icons/boxicons-regular/CheckCircle"; 
+import { CheckCircle } from "@styled-icons/boxicons-solid/CheckCircle";
+import { Flame} from "@styled-icons/boxicons-solid/Flame"; 
+import { HeartCircle} from "@styled-icons/boxicons-solid/HeartCircle";
 
 
 export const Icons = {
     DotCircle: RadioCircleMarked,
     ExternalLink: ExternalLink,
-    Bolt: BoltCircle,
     Check: CheckCircle,
+    Flame: Flame,
+    Heart: HeartCircle,
 }
 
 export const Quotes = [
