@@ -5,7 +5,8 @@ import { Icons } from "./utilities";
 
 export default function Products() {
   const products = useApi().products;
-  console.log(products);
+  useApi().setProductView("hello World");
+  console.log(useApi().productView);
 
   function insight(rating) {
     var r = parseFloat(rating);
@@ -54,7 +55,7 @@ export default function Products() {
               /10
             </Rate>
             <Price>
-              KSH{" "}
+              KSh{" "}
               {findPrice(
                 products.JumiaPrice,
                 products.KilimallPrice,
@@ -145,6 +146,8 @@ const Image = styled.img`
 
 const Price = styled.p`
   padding: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
 `;
 
 const Title = styled.h2``;
@@ -159,6 +162,12 @@ const Wrapper = styled.div`
   background-color: #fff;
   width: 200px;
   padding: 10px;
+  transition: box-shadow 0.4s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.37);
+  }
 `;
 
 const Page = styled.div`
