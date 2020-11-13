@@ -12,6 +12,7 @@ export const ProductProvider = ({ children }) => {
   }, []);
 
   const [products, setProducts] = useState([]);
+  const [productView, setProductView] = useState();
 
   const productData = async () => {
     const rawData = await fetch(
@@ -25,7 +26,7 @@ export const ProductProvider = ({ children }) => {
   };
 
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products, setProductView, productView }}>
       {children}
     </ProductContext.Provider>
   );
