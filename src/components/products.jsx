@@ -21,11 +21,20 @@ export default function Products() {
   }
 
   function findPrice(Jumia, Kilimall, Other) {
-    var JumiaP = parseFloat(Jumia.replace(/,/g, ""));
-    var KilimallP = parseFloat(Kilimall.replace(/,/g, ""));
-    var OtherP = parseFloat(Other.replace(/,/g, ""));
-    console.log(JumiaP, KilimallP, OtherP);
-    return Math.min(JumiaP, KilimallP, OtherP);
+    var JumiaP = parseInt(Jumia.replace(/,/g, ""));
+    var KilimallP = parseInt(Kilimall.replace(/,/g, ""));
+    var OtherP = parseInt(Other.replace(/,/g, ""));
+
+    var least = Math.min.apply(
+      null,
+      [JumiaP, KilimallP, OtherP].filter(Number.isInteger)
+    );
+
+    if (least === JumiaP) {
+      return Jumia;
+    } else if (least === KilimallP) {
+      return Kilimall;
+    } else return Other;
   }
 
   return (
