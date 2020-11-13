@@ -13,7 +13,7 @@ export default function footer() {
             <External />
           </Link>
           <Link>
-            Get Your Products Listed {"  "}
+            Get A Product Listed {"  "}
             <External />
           </Link>
           <Link>
@@ -62,7 +62,7 @@ const Tag = styled.p`
   padding-bottom: 10px;
 `;
 
-const FooterWrap = styled.div`
+const FooterWrap = styled.footer`
   background-color: rgb(228 228 228 / 80%);
   color: #0c0021;
   box-shadow: 0 -1px 1px rgb(156 39 176 / 0.24),
