@@ -11,3 +11,4 @@ Curated Collection of the best Priced Electronics you can get Online & from Phys
 
 1. Icons for shops the product is available at
 2. Dark Mode
+3. Categories
