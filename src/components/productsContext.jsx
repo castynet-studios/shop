@@ -25,8 +25,13 @@ export const ProductProvider = ({ children }) => {
     setProducts(published);
   };
 
+  function setInViewProduct() { 
+    var prod = products.find(obj => obj._id === productView);
+    return prod;
+  }
+
   return (
-    <ProductContext.Provider value={{ products, setProductView, productView }}>
+    <ProductContext.Provider value={{ products, setProductView, setInViewProduct }}>
       {children}
     </ProductContext.Provider>
   );
