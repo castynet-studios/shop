@@ -4,10 +4,9 @@ import styled from "styled-components";
 import { Icons } from "./utilities";
 
 export default function Products() {
-  const products = useApi().products;
-  useApi().setProductView("hello World");
-  console.log(useApi().productView);
-
+  const api = useApi();
+  const products = api.products;
+  
   function insight(rating) {
     var r = parseFloat(rating);
     if (r > 8.5) {
@@ -38,11 +37,15 @@ export default function Products() {
     } else return Other;
   }
 
+  function LoadProduct(productId) {
+    api.setProductView(productId);
+  }
+
   return (
     <>
       <Page>
         {products.map((products) => (
-          <Wrapper key={products._id}>
+          <Wrapper key={products._id} onClick={()=>LoadProduct(products._id)}>
             <Image
               src={"https://shop.api.genztech.xyz" + products.Image.path}
               alt={products.Description}
