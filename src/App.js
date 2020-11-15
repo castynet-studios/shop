@@ -4,6 +4,7 @@ import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Quotes from "./components/quotes";
 import styled from "styled-components";
+import SingleProduct from "./components/singleProduct"
 // import { useApi } from "./components/productsContext"
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Nav />
         <Quotes />
         <Products />
+        <SingleProduct />
       </Page>
 
       <Footer />
