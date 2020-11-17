@@ -4,17 +4,27 @@ import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Quotes from "./components/quotes";
 import styled from "styled-components";
-import SingleProduct from "./components/singleProduct"
-// import { useApi } from "./components/productsContext"
+// import SingleProduct from "./components/singleProduct";
+import Loading from "./components/loading"
+import { useApi } from "./components/productsContext";
 
 function App() {
+  const api = useApi();
+  const product = api.products;
+  
+  function Loaded() {
+    console.log(product.length);
+    if (product.length === 0) {
+      return <Loading />
+    } else return <Products />;
+  }
+
   return (
     <>
       <Page>
         <Nav />
         <Quotes />
-        <Products />
-        <SingleProduct />
+        <Loaded/>
       </Page>
 
       <Footer />
