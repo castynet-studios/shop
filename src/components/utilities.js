@@ -3,6 +3,7 @@ import { ExternalLink } from "@styled-icons/heroicons-outline/ExternalLink";
 import { CheckCircle } from "@styled-icons/boxicons-solid/CheckCircle";
 import { Flame} from "@styled-icons/boxicons-solid/Flame"; 
 import { HeartCircle} from "@styled-icons/boxicons-solid/HeartCircle";
+import { LoaderOutline } from "@styled-icons/evaicons-outline/LoaderOutline"
 
 
 export const Icons = {
@@ -11,6 +12,7 @@ export const Icons = {
     Check: CheckCircle,
     Flame: Flame,
     Heart: HeartCircle,
+    Loader: LoaderOutline,
 }
 
 export const Quotes = [
