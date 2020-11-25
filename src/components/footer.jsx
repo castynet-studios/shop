@@ -9,19 +9,23 @@ export default function footer() {
       <FooterWrap>
         <LinksWrap>
           <Link>
-            Ethics Statement {"  "}
+            <span className="underline">Ethics Statement</span> {"  "}
             <External />
           </Link>
           <Link>
-            Get A Product Listed {"  "}
+            <span className="underline">Get A Product Listed</span> {"  "}
             <External />
           </Link>
           <Link>
-            Tracking &amp; Privacy Policy {"  "}
+            <span className="underline">Tracking &amp; Privacy Policy</span>{" "}
+            {"  "}
             <External />
           </Link>
           <Link>
-            How the Buyers Score is Calculated {"  "}
+            <span className="underline">
+              How the Buyers Score is Calculated
+            </span>{" "}
+            {"  "}
             <External />
           </Link>
         </LinksWrap>
@@ -46,7 +50,25 @@ const CopyRight = styled.p`
   color: #ff5722;
 `;
 
-const Link = styled.a``;
+const Link = styled.a`
+  .underline:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+`;
 
 const LinksWrap = styled.div`
   display: flex;
