@@ -8,8 +8,8 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(rgb(249 249 249 / .5), rgb(248 206 255 / .4)),
-    url(/static/media/genztechShopBackground.17c2a1b6.png);
+    background-image: linear-gradient(rgb(249 249 249 / .45), rgb(248 206 255 / .5)),
+    url(./components/static/genztechShopBackground.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto',
