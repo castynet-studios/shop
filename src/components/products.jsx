@@ -39,6 +39,7 @@ export default function Products() {
 
   function LoadProduct(productId) {
     api.setProductView(productId);
+    api.togglePage();
   }
 
   return (
