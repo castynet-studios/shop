@@ -13,6 +13,15 @@ export const ProductProvider = ({ children }) => {
 
   const [products, setProducts] = useState([]);
   const [productView, setProductView] = useState();
+  const [page, setPage] = useState("page");
+
+
+  function togglePage() {
+    if (page === "page") {
+      setPage("product")
+    }
+    else setPage("page");
+  }
 
   const productData = async () => {
     const rawData = await fetch(
@@ -31,7 +40,7 @@ export const ProductProvider = ({ children }) => {
   }
 
   return (
-    <ProductContext.Provider value={{ products, setProductView, setInViewProduct }}>
+    <ProductContext.Provider value={{ products, setProductView, setInViewProduct, togglePage, page }}>
       {children}
     </ProductContext.Provider>
   );
