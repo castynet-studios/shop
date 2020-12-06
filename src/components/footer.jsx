@@ -51,22 +51,19 @@ const CopyRight = styled.p`
 `;
 
 const Link = styled.a`
-  .underline:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 5px;
-    bottom: 0;
-    left: 0;
-    background-color: #0087ca;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  .underline {
+    transition: text-decoration 0.2s ease;
   }
 
-  .underline:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  &:hover {
+    color: #b700d6;
+
+    .underline {
+      text-decoration: underline;
+    }
   }
 `;
 
