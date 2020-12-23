@@ -31,7 +31,8 @@ export default function footer() {
         </LinksWrap>
         <Tag>GenZtech Shop</Tag>
         <CopyRight>
-          &copy; <u>Castynet Studios</u> 2018 - {Year()} | All Rights Reserved
+          &copy; <a href="http://castynet.africa">Castynet Studios</a> 2018 -{" "}
+          {Year()} | All Rights Reserved
         </CopyRight>
       </FooterWrap>
     </>
@@ -48,6 +49,9 @@ const CopyRight = styled.p`
   text-align: center;
   padding: 10px;
   color: #ff5722;
+  a {
+    color: #de3905;
+  }
 `;
 
 const Link = styled.a`
