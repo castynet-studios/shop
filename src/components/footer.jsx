@@ -23,7 +23,7 @@ export default function footer() {
           </Link>
           <Link>
             <span className="underline">
-              How the Buyers Score is Calculated
+              How the Buyer's Score is Calculated
             </span>{" "}
             {"  "}
             <External />
