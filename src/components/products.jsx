@@ -6,7 +6,7 @@ import { Icons } from "./utilities";
 export default function Products() {
   const api = useApi();
   const products = api.products;
-  
+
   function insight(rating) {
     var r = parseFloat(rating);
     if (r > 8.5) {
@@ -46,7 +46,7 @@ export default function Products() {
     <>
       <Page>
         {products.map((products) => (
-          <Wrapper key={products._id} onClick={()=>LoadProduct(products._id)}>
+          <Wrapper key={products._id} onClick={() => LoadProduct(products._id)}>
             <Image
               src={"https://shop.api.genztech.xyz" + products.Image.path}
               alt={products.Description}
