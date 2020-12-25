@@ -15,12 +15,10 @@ export const ProductProvider = ({ children }) => {
   const [productView, setProductView] = useState();
   const [page, setPage] = useState("page");
 
-
   function togglePage() {
     if (page === "page") {
-      setPage("product")
-    }
-    else setPage("page");
+      setPage("product");
+    } else setPage("page");
   }
 
   const productData = async () => {
@@ -34,13 +32,15 @@ export const ProductProvider = ({ children }) => {
     setProducts(published);
   };
 
-  function setInViewProduct() { 
-    var prod = products.find(obj => obj._id === productView);
+  function setInViewProduct() {
+    var prod = products.find((obj) => obj._id === productView);
     return prod;
   }
 
   return (
-    <ProductContext.Provider value={{ products, setProductView, setInViewProduct, togglePage, page }}>
+    <ProductContext.Provider
+      value={{ products, setProductView, setInViewProduct, togglePage, page }}
+    >
       {children}
     </ProductContext.Provider>
   );
