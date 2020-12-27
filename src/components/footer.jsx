@@ -2,32 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import { Icons } from "./utilities";
 import { Year } from "./helpers";
+import { Link } from "react-router-dom";
 
 export default function () {
   return (
     <>
       <FooterWrap>
         <LinksWrap>
-          <Link>
+          <StyledLink to="/page/ethics">
             <span className="underline">Ethics Statement</span> {"  "}
             <External />
-          </Link>
-          <Link>
+          </StyledLink>
+          <StyledLink to="/page/submit_product">
             <span className="underline">Get A Product Listed</span> {"  "}
             <External />
-          </Link>
-          <Link>
+          </StyledLink>
+          <StyledLink to="/page/privacy_policy">
             <span className="underline">Tracking &amp; Privacy Policy</span>{" "}
             {"  "}
             <External />
-          </Link>
-          <Link>
+          </StyledLink>
+          <StyledLink to="/page/buyers_score">
             <span className="underline">
               How the Buyer's Score is Calculated
             </span>{" "}
             {"  "}
             <External />
-          </Link>
+          </StyledLink>
         </LinksWrap>
         <Tag>GenZtech Shop</Tag>
         <CopyRight>
@@ -50,13 +51,14 @@ const CopyRight = styled.p`
   padding: 10px;
   color: #ff5722;
   a {
-    color: #de3905;
+    color: #ff5722;
   }
 `;
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
   cursor: pointer;
   transition: color 0.2s ease;
+  color: #0c0021;
 
   .underline {
     transition: text-decoration 0.2s ease;
