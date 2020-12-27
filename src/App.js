@@ -1,14 +1,16 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
+import { useApi } from "./components/productsContext";
+
+import SingleProduct from "./components/singleProduct";
 import Products from "./components/products";
-import Nav from "./components/nav";
+import Loading from "./components/loading";
 import Footer from "./components/footer";
 import Quotes from "./components/quotes";
-import styled from "styled-components";
-import SingleProduct from "./components/singleProduct";
-import Loading from "./components/loading";
-import { useApi } from "./components/productsContext";
 import NotFound from "./components/404";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Pages from "./components/pages";
+import Nav from "./components/nav";
 
 export default function App() {
   const api = useApi();
@@ -35,6 +37,11 @@ export default function App() {
             <Route
               path="/product/:productId"
               render={(props) => <SingleProduct {...props} />}
+            />
+            <Route
+              exact
+              path="/page/:pageSlug"
+              render={(props) => <Pages {...props} />}
             />
             <Route exact path="/ooh-no" component={NotFound} />
             <Route component={NotFound} />
