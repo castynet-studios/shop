@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Icons } from "./utilities";
 import { Year } from "./helpers";
 
-export default function footer() {
+export default function () {
   return (
     <>
       <FooterWrap>

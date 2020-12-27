@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Icons } from "./utilities";
 import { Link } from "react-router-dom";
 
-export default function Products() {
+export default function () {
   const api = useApi();
   const products = api.products;
 

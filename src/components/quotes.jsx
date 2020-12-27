@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Quotes, Icons } from "./utilities";
 
-export default function QuotesSection() {
+export default function () {
   var singleQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
 
   return (

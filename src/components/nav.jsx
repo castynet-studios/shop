@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "./static/logo.png";
 import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function () {
   return (
     <>
       <Nav>
