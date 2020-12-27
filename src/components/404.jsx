@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function () {
   return (
@@ -12,8 +13,10 @@ export default function () {
         </p>
         <NA>We could not find that, anywhere...</NA>
         <p>
-          Anyway Keep Exploring:- <br />
-          <Button href="genztech.xyz">Home</Button>
+          anyway keep exploring:- <br />
+          <Link to="/">
+            <Bttn>Home</Bttn>
+          </Link>
           <Button href="wikipedia.com">Wikipedia</Button>
           <Button href="instagram.com">Instagram</Button>
           <Button href="twitter.com">Twitter</Button>
@@ -23,8 +26,8 @@ export default function () {
   );
 }
 
-const Button = styled.a`
-  width: fit-content;
+// check how to declare two styled components at once | share styles between components
+const Bttn = styled.button`
   width: fit-content;
   padding: 5px 10px;
   background-color: #006d04;
@@ -35,7 +38,28 @@ const Button = styled.a`
   margin: 10px 0 0 10px;
   border-radius: 2px;
   text-decoration: none;
-  transition: background-color 0.5s;
+  transition: background-color 0.3s;
+  display: inline-block;
+  border: none;
+
+  &:hover {
+    background-color: #7b0090;
+    cursor: pointer;
+  }
+`;
+
+const Button = styled.a`
+  width: fit-content;
+  padding: 5px 10px;
+  background-color: #006d04;
+  color: #fffefe;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.95em;
+  margin: 10px 0 0 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.3s;
   display: inline-block;
 
   &:hover {
@@ -58,6 +82,7 @@ const Wrapper = styled.div`
   color: #0c0021;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border: 2px solid #fff;
 
   p {
     padding: 10px;
