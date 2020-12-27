@@ -7,13 +7,14 @@ import styled from "styled-components";
 import SingleProduct from "./components/singleProduct";
 import Loading from "./components/loading";
 import { useApi } from "./components/productsContext";
+import NotFound from "./components/404";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+export default function App() {
   const api = useApi();
-  const product = api.products;
 
   function LoadingPage() {
-    if (product.length === 0) {
+    if (api.products.length === 0) {
       return <Loading />;
     } else
       return (
@@ -24,23 +25,23 @@ function App() {
       );
   }
 
-  function InView() {
-    if (api.page === "page") {
-      return <LoadingPage />;
-    } else if (api.page === "product") {
-      return <SingleProduct />;
-    }
-  }
-
   return (
     <>
-      <Page>
-        <Nav />
-
-        <InView />
-      </Page>
-
-      <Footer />
+      <Router>
+        <Page>
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={LoadingPage} />
+            <Route
+              path="/product/:productId"
+              render={(props) => <SingleProduct {...props} />}
+            />
+            <Route exact path="/ooh-no" component={NotFound} />
+            <Route component={NotFound} />
+          </Switch>
+        </Page>
+        <Footer />
+      </Router>
     </>
   );
 }
@@ -48,5 +49,3 @@ function App() {
 const Page = styled.div`
   min-height: 80vh;
 `;
-
-export default App;
