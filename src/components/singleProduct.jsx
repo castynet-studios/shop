@@ -3,15 +3,24 @@ import styled from "styled-components";
 import { useApi } from "./productsContext";
 import Loading from "./loading";
 import ReactMarkdown from "react-markdown";
+import { Redirect } from "react-router-dom";
 
-export default function () {
+export default function (data) {
   const api = useApi();
   const [product, setProduct] = useState();
 
+  const productId = data.match.params.productId;
+  const singleProduct = api.products.find((obj) => obj._id === productId);
+
   useEffect(() => {
-    setProduct(api.setInViewProduct());
-    console.log(product);
-  }, [api, product]);
+    setProduct(singleProduct);
+  }, [singleProduct]);
+
+  if (api.products.length !== 0) {
+    if (!data || singleProduct === undefined) {
+      return <Redirect to={{ pathname: "/ooh-no" }} />;
+    }
+  }
 
   function ProductInfo() {
     if (product === undefined) {
@@ -49,9 +58,9 @@ export default function () {
               </ContentSection>
               <ContentSection>
                 <h3>Spec</h3>
-                <p>
+                <div>
                   <ReactMarkdown source={product.Spec} />
-                </p>
+                </div>
               </ContentSection>
 
               <ShopWrap content={product.JumiaLink}>
