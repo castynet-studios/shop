@@ -2,6 +2,7 @@ import React from "react";
 import { useApi } from "./productsContext";
 import styled from "styled-components";
 import { Icons } from "./utilities";
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const api = useApi();
@@ -37,36 +38,33 @@ export default function Products() {
     } else return Other;
   }
 
-  function LoadProduct(productId) {
-    api.setProductView(productId);
-    api.togglePage();
-  }
-
   return (
     <>
       <Page>
         {products.map((products) => (
-          <Wrapper key={products._id} onClick={() => LoadProduct(products._id)}>
-            <Image
-              src={"https://shop.api.genztech.xyz" + products.Image.path}
-              alt={products.Description}
-            />
-            <Title>{products.Title}</Title>
-            <Rate color={products.BuyersScore}>
-              {insight(products.BuyersScore)}
-              {"  "} Buyers Score {"  "}
-              <span className="coloured">{products.BuyersScore}</span>
-              /10
-            </Rate>
-            <Price>
-              KSh{" "}
-              {findPrice(
-                products.JumiaPrice,
-                products.KilimallPrice,
-                products.OtherPrice
-              )}
-            </Price>
-          </Wrapper>
+          <StyledLink key={products._id} to={`/product/${products._id}`}>
+            <Wrapper>
+              <Image
+                src={"https://shop.api.genztech.xyz" + products.Image.path}
+                alt={products.Description}
+              />
+              <Title>{products.Title}</Title>
+              <Rate color={products.BuyersScore}>
+                {insight(products.BuyersScore)}
+                {"  "} Buyers Score {"  "}
+                <span className="coloured">{products.BuyersScore}</span>
+                /10
+              </Rate>
+              <Price>
+                KSh{" "}
+                {findPrice(
+                  products.JumiaPrice,
+                  products.KilimallPrice,
+                  products.OtherPrice
+                )}
+              </Price>
+            </Wrapper>
+          </StyledLink>
         ))}
         <div style={{ width: "220px", height: "0" }}></div>
         <div style={{ width: "220px", height: "0" }}></div>
@@ -88,6 +86,20 @@ const handleBgColor = (color) => {
     return;
   }
 };
+
+const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: inherit;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    color: inherit;
+    text-decoration: inherit;
+  }
+`;
 
 const Flame = styled(Icons.Flame)`
   vertical-align: text-bottom;
