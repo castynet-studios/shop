@@ -23,13 +23,15 @@ export default function (data) {
       } else if (currentPage === "ethics") {
         return Ethics;
       } else {
-        return <Redirect to={{ pathname: "/ooh-no" }} />;
+        setFile("error");
       }
     }
     fetch(PageData())
       .then((res) => res.text())
       .then((text) => setFile(text));
   }, [currentPage]);
+
+  if (file === "error") return <Redirect to={{ pathname: "/ooh-no" }} />;
 
   return (
     <>
@@ -40,4 +42,24 @@ export default function (data) {
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  max-width: 650px;
+  margin: 15px auto 30px;
+  text-align: justify;
+  background-color: #fff;
+  padding-bottom: 20px;
+
+  h1 {
+    padding: 20px 15px 20px 25px;
+    background-color: #203d4b;
+    color: #f0ecef;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin: 10px 40px;
+    font-size: 1.3em;
+  }
+`;
