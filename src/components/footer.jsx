@@ -59,6 +59,7 @@ const StyledLink = styled(Link)`
   cursor: pointer;
   transition: color 0.2s ease;
   color: #0c0021;
+  padding-top: 10px;
 
   .underline {
     transition: text-decoration 0.2s ease;
@@ -92,7 +93,7 @@ const FooterWrap = styled.footer`
   color: #0c0021;
   box-shadow: 0 -1px 1px rgb(156 39 176 / 0.24),
     0 -1px 1px rgb(156 39 176 / 0.24);
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
   text-transform: uppercase;
   font-size: 0.95em;
   font-weight: 600;
