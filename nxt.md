@@ -6,3 +6,4 @@
 4. Dark Mode
 5. Back to top
 6. Icons for shops the product is available at
+7. Categories
