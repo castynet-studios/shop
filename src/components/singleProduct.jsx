@@ -9,8 +9,8 @@ export default function (data) {
   const api = useApi();
   const [product, setProduct] = useState();
 
-  const productId = data.match.params.productId;
-  const singleProduct = api.products.find((obj) => obj._id === productId);
+  const slug = data.match.params.slug;
+  const singleProduct = api.products.find((obj) => obj.slug === slug);
 
   useEffect(() => {
     setProduct(singleProduct);
