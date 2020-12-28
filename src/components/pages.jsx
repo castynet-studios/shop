@@ -61,5 +61,14 @@ const Wrapper = styled.div`
   p {
     margin: 10px 40px;
     font-size: 1.3em;
+
+    a {
+      color: #e91e63;
+    }
+  }
+
+  ol {
+    margin: 10px 60px;
+    font-size: 1.2em;
   }
 `;
