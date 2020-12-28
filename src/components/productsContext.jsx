@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import { Slugify } from "./helpers";
 
 const ProductContext = React.createContext();
 
@@ -21,15 +22,16 @@ export const ProductProvider = ({ children }) => {
     const published = data.entries.filter(function (x) {
       return x.published === true;
     });
-    setProducts(published);
+    var slugified = published.map(function (el) {
+      var o = Object.assign({}, el);
+      o.slug = Slugify(o.Title);
+      return o;
+    });
+    setProducts(slugified);
   };
 
-
-
   return (
-    <ProductContext.Provider
-      value={{ products }}
-    >
+    <ProductContext.Provider value={{ products }}>
       {children}
     </ProductContext.Provider>
   );
