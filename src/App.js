@@ -35,7 +35,7 @@ export default function App() {
           <Switch>
             <Route exact path="/" component={LoadingPage} />
             <Route
-              path="/product/:productId"
+              path="/product/:slug"
               render={(props) => <SingleProduct {...props} />}
             />
             <Route
