@@ -42,7 +42,7 @@ export default function () {
     <>
       <Page>
         {products.map((products) => (
-          <StyledLink key={products._id} to={`/product/${products._id}`}>
+          <StyledLink key={products._id} to={`/product/${products.slug}`}>
             <Wrapper>
               <Image
                 src={"https://shop.api.genztech.xyz" + products.Image.path}
