@@ -84,7 +84,6 @@ const LinksWrap = styled.div`
 
 const Tag = styled.p`
   text-align: center;
-  text-decoration: underline;
   padding-bottom: 10px;
 `;
 

@@ -15,7 +15,7 @@ export default function () {
             <Back>
               <span aria-label="home" role="img">
                 🏠
-              </span>{" "}
+              </span>
               {"  "}
               Back
             </Back>
