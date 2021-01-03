@@ -7,3 +7,6 @@
 5. Back to top
 6. Icons for shops the product is available at
 7. Categories
+8. Subscribe
+9. About page
+10. product of the week
