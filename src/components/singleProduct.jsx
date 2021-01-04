@@ -65,19 +65,19 @@ export default function (data) {
 
               <ShopWrap content={product.JumiaLink}>
                 <a href={product.JumiaLink}>
-                  Buy on Jumia - KSh {product.JumiaPrice}
+                  KSh {product.JumiaPrice} - Buy on Jumia
                 </a>
               </ShopWrap>
 
               <ShopWrap content={product.KilimallLink}>
                 <a href={product.KilimallLink}>
-                  Buy on Kilimall - KSh {product.KilimallPrice}
+                  KSh {product.KilimallPrice} - Buy on Kilimall
                 </a>
               </ShopWrap>
 
               <ShopWrap content={product.OtherLinkAddress}>
                 <a href={product.OtherLinkAddress}>
-                  Buy on {product.OtherTitle} - KSh {product.OtherPrice}
+                  KSh {product.OtherPrice} - Buy on {product.OtherTitle}
                 </a>
               </ShopWrap>
 
