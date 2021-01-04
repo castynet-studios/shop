@@ -11,3 +11,5 @@
 9. About page
 10. product of the week
 11. Meta 2.0
+12. remove review button if missing review
+13. Add lowest Price
