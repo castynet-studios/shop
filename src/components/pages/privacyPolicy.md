@@ -1,7 +1,5 @@
 # Tracking & Privacy Policy
 
-As of now we do not do any tracking, no cookies, no treats, no nothing.
+We use Google Analytics to track what our users like, what pages are most visited, the sources of our traffic, session statistics and to get a general feel of our geographical demographic.
 
-Sometime in the future we might do some tracking to have the stats of how many hits the site gets, and what the users are most interested in. This will help us have a better understanding of what you like & what you are interested in.
-
-If that happens you can check back here we'll have updated this page with all the juicy details.
+If you want to opt out of this tracking (please don't :) you can do so by installing [this Browser addon by Google](https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en)
