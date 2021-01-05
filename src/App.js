@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import { useApi } from "./components/productsContext";
+import ReactGA from "react-ga";
+import { createBrowserHistory } from "history";
 
 import SingleProduct from "./components/singleProduct";
 import Products from "./components/products";
@@ -14,6 +16,14 @@ import Nav from "./components/nav";
 
 export default function App() {
   const api = useApi();
+  const trackingId = "UA-122346776-4";
+
+  ReactGA.initialize(trackingId);
+  const history = createBrowserHistory();
+  history.listen((location) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
 
   function LoadingPage() {
     if (api.products.length === 0) {
@@ -29,7 +39,7 @@ export default function App() {
 
   return (
     <>
-      <Router>
+      <Router history={history}>
         <Page>
           <Nav />
           <Switch>
