@@ -77,11 +77,11 @@ export default function () {
 
 const handleBgColor = (color) => {
   if (color > 8.5) {
-    return "#bc00dc";
+    return "var(--light-purple)";
   } else if (color > 7.5) {
-    return "#ff0057";
+    return "var(--pink)";
   } else if (color > 5.5) {
-    return "#008000";
+    return "var(--green)";
   } else {
     return;
   }
@@ -104,7 +104,7 @@ const StyledLink = styled(Link)`
 const Flame = styled(Icons.Flame)`
   vertical-align: text-bottom;
   height: 25px;
-  color: #bc00dc;
+  color: var(--light-purple);
   background-color: #000;
   background-color: rgb(96 125 139 / 0.1);
   border-radius: 3px;
@@ -115,7 +115,7 @@ const Flame = styled(Icons.Flame)`
 const Check = styled(Icons.Check)`
   vertical-align: text-bottom;
   height: 25px;
-  color: #008000;
+  color: var(--green);
   background-color: rgb(96 125 139 / 0.1);
   border-radius: 3px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -125,7 +125,7 @@ const Check = styled(Icons.Check)`
 const Heart = styled(Icons.Heart)`
   vertical-align: text-bottom;
   height: 25px;
-  color: #ff0057;
+  color: var(--pink);
   background-color: rgb(96 125 139 / 0.1);
   border-radius: 3px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -175,7 +175,7 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: var(--white);
   width: 200px;
   padding: 10px;
   transition: box-shadow 0.4s;

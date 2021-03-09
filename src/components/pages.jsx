@@ -46,13 +46,13 @@ const Wrapper = styled.div`
   max-width: 650px;
   margin: 15px auto 30px;
   text-align: justify;
-  background-color: #fff;
+  background-color: var(--white);
   padding-bottom: 20px;
 
   h1 {
     padding: 20px 15px 20px 25px;
-    background-color: #203d4b;
-    color: #f0ecef;
+    background-color: var(--theme-dirty-blue);
+    color: var(--grey-white);
     letter-spacing: 1px;
     font-weight: 500;
     margin-bottom: 30px;
@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     font-size: 1.3em;
 
     a {
-      color: #e91e63;
+      color: var(--pink);
     }
   }
 

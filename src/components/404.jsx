@@ -30,7 +30,7 @@ export default function () {
 const Bttn = styled.button`
   width: fit-content;
   padding: 5px 10px;
-  background-color: #006d04;
+  background-color: var(--dark-green);
   color: #fffefe;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -43,7 +43,7 @@ const Bttn = styled.button`
   border: none;
 
   &:hover {
-    background-color: #7b0090;
+    background-color: var(--purple);
     cursor: pointer;
   }
 `;
@@ -51,7 +51,7 @@ const Bttn = styled.button`
 const Button = styled.a`
   width: fit-content;
   padding: 5px 10px;
-  background-color: #006d04;
+  background-color: var(--dark-green);
   color: #fffefe;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -63,7 +63,7 @@ const Button = styled.a`
   display: inline-block;
 
   &:hover {
-    background-color: #7b0090;
+    background-color: var(--purple);
   }
 `;
 
@@ -79,10 +79,10 @@ const Wrapper = styled.div`
   padding: 10px;
   background-color: rgb(230 230 230 / 0.95);
   border-radius: 5px;
-  color: #0c0021;
+  color: var(--cs-deep-blue);
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
 
   p {
     padding: 10px;
@@ -93,5 +93,5 @@ const Error = styled.h4`
   text-align: center;
   font-size: 5em;
   text-transform: uppercase;
-  color: #c50e00;
+  color: var(--error-red);
 `;

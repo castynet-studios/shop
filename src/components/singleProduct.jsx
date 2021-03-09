@@ -111,7 +111,7 @@ const Show = (content) => {
 };
 
 const handleBgColor = (great) => {
-  return great ? "#008000" : "#800000";
+  return great ? "var(--green)" : "var(--error-red)";
 };
 
 const ImageWrap = styled.div`
@@ -144,7 +144,7 @@ const ShopWrap = styled.div`
     text-transform: uppercase;
     font-size: 0.95em;
     letter-spacing: 1px;
-    border: 1px solid #720086;
+    border: 1px solid var(--purple);
 
     &:hover {
       background: linear-gradient(
@@ -163,8 +163,8 @@ const ShopWrap = styled.div`
 
 const Button = styled.a`
   padding: 8px 10px;
-  background-color: #720086;
-  color: #fff;
+  background-color: var(--purple);
+  color: var(--white);
   display: block;
   width: fit-content;
   margin: 10px;
@@ -175,7 +175,7 @@ const Button = styled.a`
   letter-spacing: 1px;
 
   &:hover {
-    background-color: #035fa9;
+    background-color: var(--blue);
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
       0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
@@ -191,7 +191,7 @@ const Rating = styled.p`
   font-weight: 500;
   font-size: 0.95em;
   background-color: ${({ great }) => handleBgColor(great)};
-  color: #fff;
+  color: var(--white);
   letter-spacing: 1px;
 `;
 
@@ -228,8 +228,8 @@ const Title = styled.h2`
 const TitleWrap = styled.div`
   padding: 30px 10px;
   margin-top: 20px;
-  color: #0c0021;
-  border-top: solid 1px #9c27b0;
+  color: var(--cs-deep-blue);
+  border-top: solid 1px var(--light-purple);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,7 +243,7 @@ const MainWrap = styled.div`
   align-items: center;
   gap: 50px;
   margin: 0 0 20px;
-  border-bottom: solid 1px #9c27b0;
+  border-bottom: solid 1px var(--light-purple);
   padding-bottom: 20px;
 `;
 

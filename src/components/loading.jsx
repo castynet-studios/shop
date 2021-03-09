@@ -26,7 +26,7 @@ const Loader = styled(Icons.Loader)`
   vertical-align: middle;
   height: 100%;
   animation: ${Rotate} 1.3s infinite linear;
-  color: #ff3d00;
+  color: var(--cs-orange);
 `;
 
 const MainWrap = styled.div`

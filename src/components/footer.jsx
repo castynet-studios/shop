@@ -43,22 +43,22 @@ export default function () {
 const External = styled(Icons.ExternalLink)`
   vertical-align: text-bottom;
   width: 20px;
-  color: #b700d6;
+  color: var(--light-purple);
 `;
 
 const CopyRight = styled.p`
   text-align: center;
   padding: 10px;
-  color: #ff5722;
+  color: var(--cs-deep-blue);
   a {
-    color: #ff5722;
+    color: var(--cs-deep-blue);
   }
 `;
 
 const StyledLink = styled(Link)`
   cursor: pointer;
   transition: color 0.2s ease;
-  color: #0c0021;
+  color: var(--cs-deep-blue);
   padding-top: 10px;
 
   .underline {
@@ -66,7 +66,7 @@ const StyledLink = styled(Link)`
   }
 
   &:hover {
-    color: #b700d6;
+    color: var(--light-purple);
 
     .underline {
       text-decoration: underline;
@@ -89,7 +89,7 @@ const Tag = styled.p`
 
 const FooterWrap = styled.footer`
   background-color: rgb(228 228 228 / 80%);
-  color: #0c0021;
+  color: var(--cs-deep-blue);
   box-shadow: 0 -1px 1px rgb(156 39 176 / 0.24),
     0 -1px 1px rgb(156 39 176 / 0.24);
   padding: 10px 20px 20px 20px;
