@@ -1,22 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --purple: #7b0090;
+  --error-red: #c50e00;
+  --cs-deep-blue: #0c0021;
+  --cs-orange: #ff5722;
+  --white: #ffffff;
+  --green: #008000;
+  --dark-green: #006d04;
+  --light-purple: #b700d6;
+  --pink: #ff0057;
+  --theme-dirty-blue: #203d4b;
+  --grey-white: #f8ccff;
+  --blue: #035fa9;
+}
 
 html {
-    scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 
 body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient(rgb(249 249 249 / .45), rgb(248 206 255 / .5)),
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+      rgb(249 249 249 / 0.45),
+      rgb(248 206 255 / 0.5)
+    ),
     url(./components/static/genztechShopBackground.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Roboto',
-    sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
