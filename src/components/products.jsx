@@ -66,10 +66,10 @@ export default function () {
             </Wrapper>
           </StyledLink>
         ))}
-        <div style={{ width: "220px", height: "0" }}></div>
-        <div style={{ width: "220px", height: "0" }}></div>
-        <div style={{ width: "220px", height: "0" }}></div>
-        <div style={{ width: "220px", height: "0" }}></div>
+        <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
+        <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
+        <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
+        <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
       </Page>
     </>
   );
@@ -179,6 +179,7 @@ const Wrapper = styled.div`
   width: 200px;
   padding: 10px;
   transition: box-shadow 0.4s;
+  margin: 7px;
 
   &:hover {
     cursor: pointer;
@@ -192,5 +193,4 @@ const Page = styled.div`
   flex-wrap: wrap;
   padding: 3%;
   padding-top: 2%;
-  gap: 15px;
 `;
