@@ -23,13 +23,44 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Shop | Genztech: the generation that is tech</title>
   </head>
+  <style>
+    .no-script {
+      text-align: justify;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 25px;
+      font-size: 1.5em;
+      font-family: "Teko", sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    .marked {
+      background: #ffeb3b;
+      line-height: 7px;
+      padding: 0 5px;
+      height: 12px;
+      display: inline-block;
+      color: #7b0090;
+    }
+  </style>
   <body>
     <noscript>
-      Hey,<br />
-      Our site can't run without JavaScript; its like you're trying to run a
-      steam engine, without water:(
-      <br />anyway, pop us an email, we'll respond
-      <mark> talk-to@castynet.africa</mark>
+      <p class="no-script">
+        Hey,<br />
+        this shop can't run without <span class="marked">JavaScript;</span>
+        <br />
+        check that you have <span class="marked">JavaScript</span> enabled then
+        <span class="marked">reload.</span>
+      </p>
+      <img
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://analytics.castynet.africa/matomo.php?idsite=2&amp;rec=1"
+        style="border: 0"
+        alt=""
+      />
     </noscript>
     <div id="root"></div>
   </body>
