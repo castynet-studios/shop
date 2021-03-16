@@ -181,6 +181,10 @@ const Wrapper = styled.div`
   transition: box-shadow 0.4s;
   margin: 7px;
 
+  @media screen and (max-width: 450px) {
+    width: 90%;
+  }
+
   &:hover {
     cursor: pointer;
     box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.37);
