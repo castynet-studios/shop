@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Icons } from "./utilities";
 import { Year } from "./helpers";
 import { Link } from "react-router-dom";
+// import Subscribe from "./mail";
 
 export default function () {
   return (
@@ -30,6 +31,7 @@ export default function () {
             <External />
           </StyledLink>
         </LinksWrap>
+        {/* <Subscribe /> */}
         <Tag>GenZtech Shop</Tag>
         <CopyRight>
           &copy; <a href="http://castynet.africa">Castynet Studios</a> 2018 -{" "}
