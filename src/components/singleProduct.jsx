@@ -26,6 +26,7 @@ export default function (data) {
     if (product === undefined) {
       return <Loading />;
     } else {
+      console.log(product.ReviewLink);
       return <MP />;
     }
   }
@@ -82,6 +83,7 @@ export default function (data) {
               </ShopWrap>
 
               <Button
+                content={product.ReviewLink}
                 href={product.ReviewLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -162,10 +164,10 @@ const ShopWrap = styled.div`
 `;
 
 const Button = styled.a`
+  display: ${({ content }) => Show(content)};
   padding: 8px 10px;
   background-color: var(--purple);
   color: var(--white);
-  display: block;
   width: fit-content;
   margin: 10px;
   border-radius: 4px;
