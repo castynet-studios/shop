@@ -90,6 +90,7 @@ const handleBgColor = (color) => {
 const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: inherit;
+  margin: 0 auto;
 
   &:focus,
   &:hover,
@@ -98,6 +99,10 @@ const StyledLink = styled(Link)`
   &:active {
     color: inherit;
     text-decoration: inherit;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: fit-content;
   }
 `;
 
@@ -179,11 +184,10 @@ const Wrapper = styled.div`
   width: 200px;
   padding: 10px;
   transition: box-shadow 0.4s;
-  margin: 7px;
+  margin: 7px auto;
 
   @media screen and (max-width: 450px) {
     width: 80%;
-    margin: 7px auto;
   }
 
   &:hover {
@@ -195,11 +199,13 @@ const Wrapper = styled.div`
 const Page = styled.div`
   display: flex;
   justify-content: space-around;
+
   flex-wrap: wrap;
   padding: 3%;
   padding-top: 2%;
 
   @media screen and (max-width: 450px) {
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
 `;
