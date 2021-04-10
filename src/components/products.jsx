@@ -183,6 +183,7 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 450px) {
     width: 80%;
+    margin: 7px auto;
   }
 
   &:hover {
@@ -197,4 +198,8 @@ const Page = styled.div`
   flex-wrap: wrap;
   padding: 3%;
   padding-top: 2%;
+
+  @media screen and (max-width: 450px) {
+    margin: 0 auto;
+  }
 `;
