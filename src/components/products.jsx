@@ -90,7 +90,6 @@ const handleBgColor = (color) => {
 const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: inherit;
-  margin: 0 auto;
 
   &:focus,
   &:hover,
@@ -103,6 +102,7 @@ const StyledLink = styled(Link)`
 
   @media screen and (max-width: 450px) {
     width: fit-content;
+    margin: 0 auto;
   }
 `;
 
@@ -184,7 +184,7 @@ const Wrapper = styled.div`
   width: 200px;
   padding: 10px;
   transition: box-shadow 0.4s;
-  margin: 7px auto;
+  margin: 7px;
 
   @media screen and (max-width: 450px) {
     width: 80%;
