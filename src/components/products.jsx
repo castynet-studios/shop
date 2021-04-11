@@ -188,6 +188,7 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 450px) {
     width: 80%;
+    margin: 7px auto;
   }
 
   &:hover {
