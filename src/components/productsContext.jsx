@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Slugify } from "./helpers";
+import { Slugify, DynamicSort } from "./helpers";
 
 const ProductContext = React.createContext();
 
@@ -27,6 +27,7 @@ export const ProductProvider = ({ children }) => {
       o.slug = Slugify(o.Title);
       return o;
     });
+    slugified.sort(DynamicSort("BuyersScore"));
     setProducts(slugified);
   };
 
