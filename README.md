@@ -5,4 +5,4 @@ Curated Collection of the best Priced Electronics you can get Online & from Phys
 **[Go Shopping](https://shop.api.genztech.xyz)**
 
 **A GenZtech Project**  
-**© 2018 - 2020 Castynet Studios | All Rights Reserved**
+**© 2018 - 2021 Castynet Studios | All Rights Reserved**
