@@ -8,35 +8,18 @@ export default function () {
   const api = useApi();
   const products = api.products;
 
-  function insight(rating) {
+  const insight = (rating) => {
     var r = parseFloat(rating);
-    if (r > 8.5) {
-      return <Flame />;
-    } else if (r > 7.5) {
-      return <Heart />;
-    } else if (r > 5.5) {
-      return <Check />;
-    } else {
-      return;
-    }
-  }
+    return r > 8.5 ? <Flame /> : r > 7.5 ? <Heart /> : <Check />;
+  };
 
-  function findPrice(Jumia, Kilimall, Other) {
+  const findPrice = (Jumia, Kilimall, Other) => {
     var JumiaP = parseInt(Jumia.replace(/,/g, ""));
     var KilimallP = parseInt(Kilimall.replace(/,/g, ""));
     var OtherP = parseInt(Other.replace(/,/g, ""));
-
-    var least = Math.min.apply(
-      null,
-      [JumiaP, KilimallP, OtherP].filter(Number.isInteger)
-    );
-
-    if (least === JumiaP) {
-      return Jumia;
-    } else if (least === KilimallP) {
-      return Kilimall;
-    } else return Other;
-  }
+    var least = Math.min.apply(null, [JumiaP, KilimallP, OtherP].filter(Number.isInteger));
+    return least === JumiaP ? Jumia : least === KilimallP ? Kilimall : Other;
+  };
 
   return (
     <>
@@ -44,10 +27,7 @@ export default function () {
         {products.map((products) => (
           <StyledLink key={products._id} to={`/product/${products.slug}`}>
             <Wrapper>
-              <Image
-                src={"https://shop.api.genztech.xyz" + products.Image.path}
-                alt={products.Description}
-              />
+              <Image src={"https://shop.api.genztech.xyz" + products.Image.path} alt={products.Description} />
               <Title>{products.Title}</Title>
               <Rate color={products.BuyersScore}>
                 {insight(products.BuyersScore)}
@@ -55,14 +35,7 @@ export default function () {
                 <span className="coloured">{products.BuyersScore}</span>
                 /10
               </Rate>
-              <Price>
-                KSh{" "}
-                {findPrice(
-                  products.JumiaPrice,
-                  products.KilimallPrice,
-                  products.OtherPrice
-                )}
-              </Price>
+              <Price>KSh {findPrice(products.JumiaPrice, products.KilimallPrice, products.OtherPrice)}</Price>
             </Wrapper>
           </StyledLink>
         ))}
@@ -76,15 +49,7 @@ export default function () {
 }
 
 const handleBgColor = (color) => {
-  if (color > 8.5) {
-    return "var(--light-purple)";
-  } else if (color > 7.5) {
-    return "var(--pink)";
-  } else if (color > 5.5) {
-    return "var(--green)";
-  } else {
-    return;
-  }
+  return color > 8.5 ? "var(--light-purple)" : color > 7.5 ? "var(--pink)" : "var(--green)";
 };
 
 const StyledLink = styled(Link)`
@@ -113,8 +78,8 @@ const Flame = styled(Icons.Flame)`
   background-color: #000;
   background-color: rgb(96 125 139 / 0.1);
   border-radius: 3px;
-  box-shadow: 0px 2px 1px -1px rgba(56, 40, 40, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px -1px rgba(56, 40, 40, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 `;
 
 const Check = styled(Icons.Check)`
@@ -123,8 +88,8 @@ const Check = styled(Icons.Check)`
   color: var(--green);
   background-color: rgb(96 125 139 / 0.1);
   border-radius: 3px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 `;
 
 const Heart = styled(Icons.Heart)`
@@ -133,8 +98,8 @@ const Heart = styled(Icons.Heart)`
   color: var(--pink);
   background-color: rgb(96 125 139 / 0.1);
   border-radius: 3px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 `;
 
 const Rate = styled.p`
@@ -174,8 +139,8 @@ const Price = styled.p`
 const Title = styled.h2``;
 
 const Wrapper = styled.div`
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
