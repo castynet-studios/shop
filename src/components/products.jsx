@@ -3,6 +3,7 @@ import { useApi } from "./productsContext";
 import styled from "styled-components";
 import { Icons } from "./utilities";
 import { Link } from "react-router-dom";
+import Pagination from "./pagination";
 
 export default function () {
   const api = useApi();
@@ -28,7 +29,7 @@ export default function () {
           <StyledLink key={products._id} to={`/product/${products.slug}`}>
             <Wrapper>
               <Image src={"https://shop.api.genztech.xyz" + products.Image.path} alt={products.Description} />
-              <Title>{products.Title}</Title>
+              <h2>{products.Title}</h2>
               <Rate color={products.BuyersScore}>
                 {insight(products.BuyersScore)}
                 {"  "} Buyers Score {"  "}
@@ -42,8 +43,8 @@ export default function () {
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
-        <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
       </Page>
+      <Pagination />
     </>
   );
 }
@@ -136,8 +137,6 @@ const Price = styled.p`
   letter-spacing: 1px;
 `;
 
-const Title = styled.h2``;
-
 const Wrapper = styled.div`
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -167,7 +166,7 @@ const Page = styled.div`
   justify-content: space-around;
 
   flex-wrap: wrap;
-  padding: 3%;
+  padding: 2% 3% 0 3% ;
   padding-top: 2%;
 
   @media screen and (max-width: 450px) {
