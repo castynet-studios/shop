@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  margin: 20px 0 10px;
+  background: rgba(255, 255, 255, 0.1);
 `;
 
 export const PageWrap = styled.div`
