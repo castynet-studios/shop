@@ -6,4 +6,4 @@ Whenever available this site is supported by affiliate commissions for products 
 
 Not all products include commissions esp the physical stores. But even in those cases we ensure to list every products we think you might like.
 
-For what user data we collect and how it is handled see the [tracking & privacy policy](mailto:talk-to@castynet.africa) page.
+For what user data we collect and how it is handled see the [tracking & privacy policy](/page/privacy_policy) page.
