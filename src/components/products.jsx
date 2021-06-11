@@ -43,8 +43,8 @@ export default function () {
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
+        <Pagination />
       </Page>
-      <Pagination />
     </>
   );
 }
@@ -140,12 +140,13 @@ const Price = styled.p`
 const Wrapper = styled.div`
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   border-radius: 2px;
   background-color: var(--white);
   width: 200px;
+  height: 320px;
   padding: 10px;
   transition: box-shadow 0.4s;
   margin: 7px;
@@ -153,6 +154,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 450px) {
     width: 80%;
     margin: 7px auto;
+    height: fit-content;
   }
 
   &:hover {
@@ -164,10 +166,13 @@ const Wrapper = styled.div`
 const Page = styled.div`
   display: flex;
   justify-content: space-around;
-
+  max-width: 1000px;
   flex-wrap: wrap;
-  padding: 2% 3% 0 3% ;
-  padding-top: 2%;
+  padding: 3% 3% 0 3%;
+  margin: 0 auto 30px;
+  background-color: rgb(37 0 43 / 0.2);
+  border-radius: 2px;
+  border: 1px dotted rgba(0, 0, 0, 0.37);
 
   @media screen and (max-width: 450px) {
     justify-content: center;
