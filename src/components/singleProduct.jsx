@@ -14,22 +14,13 @@ export default function (data) {
 
   useEffect(() => {
     setProduct(singleProduct);
-  }, [singleProduct]);
+  }, [singleProduct]); 
 
-  if (api.products.length !== 0) {
-    if (!data || singleProduct === undefined) {
-      return <Redirect to={{ pathname: "/ooh-no" }} />;
-    }
+  if (api.products.length !== 0 && (!data || singleProduct === undefined)) {
+    return <Redirect to={{ pathname: "/ooh-no" }} />;
   }
 
-  function ProductInfo() {
-    if (product === undefined) {
-      return <Loading />;
-    } else {
-      console.log(product.ReviewLink);
-      return <MP />;
-    }
-  }
+  const ProductInfo = () => (product === undefined ? <Loading /> : <MP />);
 
   function MP() {
     return (
@@ -41,9 +32,7 @@ export default function (data) {
 
           <MainWrap>
             <ImageWrap>
-              <Rating great={product.ShouldBuy}>
-                Buyer's Rating - {product.BuyersScore}/10
-              </Rating>
+              <Rating great={product.ShouldBuy}>Buyer's Rating - {product.BuyersScore}/10</Rating>
               <ProductImage>
                 <Image
                   src={"https://shop.api.genztech.xyz" + product.Image.path}
@@ -65,15 +54,11 @@ export default function (data) {
               </ContentSection>
 
               <ShopWrap content={product.JumiaLink}>
-                <a href={product.JumiaLink}>
-                  KSh {product.JumiaPrice} - Buy on Jumia
-                </a>
+                <a href={product.JumiaLink}>KSh {product.JumiaPrice} - Buy on Jumia</a>
               </ShopWrap>
 
               <ShopWrap content={product.KilimallLink}>
-                <a href={product.KilimallLink}>
-                  KSh {product.KilimallPrice} - Buy on Kilimall
-                </a>
+                <a href={product.KilimallLink}>KSh {product.KilimallPrice} - Buy on Kilimall</a>
               </ShopWrap>
 
               <ShopWrap content={product.OtherLinkAddress}>
@@ -106,11 +91,7 @@ export default function (data) {
   );
 }
 
-const Show = (content) => {
-  if (content === "") {
-    return "none";
-  } else return "block";
-};
+const Show = (content) => (content === "" ? "none" : "block");
 
 const handleBgColor = (great) => {
   return great ? "var(--green)" : "var(--error-red)";
@@ -157,8 +138,8 @@ const ShopWrap = styled.div`
         rgba(255, 85, 0, 0.2) 75%,
         rgba(255, 145, 0, 0.2) 100%
       );
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-        0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
   }
 `;
@@ -178,8 +159,8 @@ const Button = styled.a`
 
   &:hover {
     background-color: var(--blue);
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 `;
 
