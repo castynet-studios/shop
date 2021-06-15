@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.45146910.chunk.css",
+    "main.js": "/static/js/main.1b81609f.chunk.js",
+    "main.js.map": "/static/js/main.1b81609f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f2e4f4fd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f2e4f4fd.js.map",
+    "static/js/2.79ae8e5a.chunk.js": "/static/js/2.79ae8e5a.chunk.js",
+    "static/js/2.79ae8e5a.chunk.js.map": "/static/js/2.79ae8e5a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9b27305d4a1a108192c3be62e4f4656a.js": "/precache-manifest.9b27305d4a1a108192c3be62e4f4656a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.45146910.chunk.css.map": "/static/css/main.45146910.chunk.css.map",
+    "static/js/2.79ae8e5a.chunk.js.LICENSE.txt": "/static/js/2.79ae8e5a.chunk.js.LICENSE.txt",
+    "static/media/buyersScore.md": "/static/media/buyersScore.d75d08e2.md",
+    "static/media/ethics.md": "/static/media/ethics.0176d17e.md",
+    "static/media/index.css": "/static/media/genztechShopBackground.17c2a1b6.png",
+    "static/media/logo.png": "/static/media/logo.b9b4b74e.png",
+    "static/media/privacyPolicy.md": "/static/media/privacyPolicy.8eef4c00.md",
+    "static/media/submit.md": "/static/media/submit.dd2e002e.md"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2e4f4fd.js",
+    "static/js/2.79ae8e5a.chunk.js",
+    "static/css/main.45146910.chunk.css",
+    "static/js/main.1b81609f.chunk.js"
+  ]
+}
