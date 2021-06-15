@@ -25,14 +25,14 @@ export default function App() {
     ReactGA.pageview(location.pathname);
   });
 
-  function LoadingPage() {
+  function LoadingPage(props) {
     if (api.products.length === 0) {
       return <Loading />;
     } else
       return (
         <>
           <Quotes />
-          <Products />
+          <Products {...props} />
         </>
       );
   }
@@ -43,16 +43,10 @@ export default function App() {
         <Page>
           <Nav />
           <Switch>
-            <Route exact path="/" component={LoadingPage} />
-            <Route
-              path="/product/:slug"
-              render={(props) => <SingleProduct {...props} />}
-            />
-            <Route
-              exact
-              path="/page/:pageSlug"
-              render={(props) => <Pages {...props} />}
-            />
+            <Route exact path="/" render={(props) => <LoadingPage {...props} />} />
+            <Route path="/product/:slug" render={(props) => <SingleProduct {...props} />} />
+            {/* <Route path="/p?/:slug" render={(props) => <SingleProduct {...props} />} /> */}
+            <Route exact path="/page/:pageSlug" render={(props) => <Pages {...props} />} />
             <Route exact path="/ooh-no" component={NotFound} />
             <Route component={NotFound} />
           </Switch>
