@@ -5,7 +5,7 @@ import { Icons } from "./utilities";
 import { Link } from "react-router-dom";
 import Pagination from "./pagination";
 
-export default function () {
+export default function (props) {
   const api = useApi();
   const products = api.products;
 
@@ -28,7 +28,10 @@ export default function () {
         {products.map((products) => (
           <StyledLink key={products._id} to={`/product/${products.slug}`}>
             <Wrapper>
-              <Image src={"https://shop.api.genztech.xyz" + products.Image.path} alt={products.Description} />
+              <Image
+                src={"https://shop.api.genztech.xyz" + products.Image.path}
+                alt={products.Description}
+              />
               <h2>{products.Title}</h2>
               <Rate color={products.BuyersScore}>
                 {insight(products.BuyersScore)}
@@ -36,14 +39,16 @@ export default function () {
                 <span className="coloured">{products.BuyersScore}</span>
                 /10
               </Rate>
-              <Price>KSh {findPrice(products.JumiaPrice, products.KilimallPrice, products.OtherPrice)}</Price>
+              <Price>
+                KSh {findPrice(products.JumiaPrice, products.KilimallPrice, products.OtherPrice)}
+              </Price>
             </Wrapper>
           </StyledLink>
         ))}
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
-        <Pagination />
+        <Pagination {...props} />
       </Page>
     </>
   );
