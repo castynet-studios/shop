@@ -3,7 +3,7 @@ import { useApi } from "./productsContext";
 import styled from "styled-components";
 import { Icons } from "./utilities";
 import { Link } from "react-router-dom";
-import Pagination from "./pagination";
+// import Pagination from "./pagination";
 
 export default function (props) {
   const api = useApi();
@@ -48,7 +48,7 @@ export default function (props) {
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
         <div style={{ width: "220px", height: "0", margin: "7px" }}></div>
-        <Pagination {...props} />
+        {/* <Pagination {...props} /> */}
       </Page>
     </>
   );
