@@ -18,7 +18,7 @@ export const ProductProvider = ({ children }) => {
 
   const productData = async (limit, page) => {
     var rawData = await fetch(
-      "https://shop.api.genztech.xyz/api/collections/get/Product?token=9e0994af324faa13be7993a9c45782",
+      `https://shop.api.genztech.xyz/api/collections/get/Product?token=${process.env.REACT_APP_AUTH}`,
       {
         method: "post",
         headers: { "Content-Type": "application/json" },
