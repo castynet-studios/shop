@@ -17,6 +17,7 @@ export const PageWrap = styled.div`
 `;
 
 export const Button = styled.button`
+  display: ${(props) => (props.visible ? "inline-block" : "none")};
   width: 35px;
   height: 35px;
   margin: 0 5px;
@@ -25,14 +26,15 @@ export const Button = styled.button`
   outline: none;
   border: none;
   border-radius: 2px;
-  background-color: ${(props) => (props.active ? "var(--purple)" : "aliceblue")};
+  background-color: ${(props) => (props.active === "active" ? "var(--purple)" : "aliceblue")};
   font-weight: 600;
-  color: ${(props) => (props.active ? "var(--white)" : "var (--cs-deep-blue)")};
+  color: ${(props) => (props.active === "active" ? "var(--white)" : "var (--cs-deep-blue)")};
   transition: all 0.5s ease;
 
   &:hover {
-    background-color: ${(props) => (props.active ? "var(--purple)" : "var(--pink)")};
+    background-color: ${(props) => (props.active === "active" ? "var(--purple)" : "var(--pink)")};
     color: var(--white);
-    cursor: ${(props) => (props.active ? "not-allowed" : "pointer")};
+    cursor: ${(props) => (props.active === "active" ? "not-allowed" : "pointer")};
+    box-shadow: 0px 1px 8px 2px rgb(0 0 0 / 0.37);
   }
 `;
