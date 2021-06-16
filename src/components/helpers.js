@@ -1,25 +1,43 @@
 export function Year() {
-  var d = new Date();
-  var n = d.getFullYear();
-  return n;
+  var date = new Date();
+  return date.getFullYear();
 }
 
 export function Slugify(text) {
-  const from = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;";
-  const to = "aaaaaeeeeeiiiiooooouuuunc------";
-
+  const a = "ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;";
+  const b = "aaaaaeeeeeiiiiooooouuuunc------";
   const newText = text
     .split("")
-    .map((letter, i) =>
-      letter.replace(new RegExp(from.charAt(i), "g"), to.charAt(i))
-    );
-
+    .map((letter, i) => letter.replace(new RegExp(a.charAt(i), "g"), b.charAt(i)));
   return newText
-    .toString() // Cast to string
-    .toLowerCase() // Convert the string to lowercase letters
-    .trim() // Remove whitespace from both sides of a string
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/&/g, "-y-") // Replace & with 'and'
-    .replace(/[^\w-]+/g, "") // Remove all non-word chars
-    .replace(/--+/g, "-"); // Replace multiple - with single -
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/&/g, "-y-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
 }
+
+export const getPagesArr = (x, last) => {
+  var pages = [1, last];
+  if (x === 1 || x === 2 || x === 3 || x === 4) {
+    [2, 3, 4].forEach((e) => {
+      if (e < last) {
+        pages.push(e);
+      }
+    });
+  } else if (x === last || x === last - 1) {
+    [last - 3, last - 2, last - 1].forEach((e) => {
+      if (e > 1) {
+        pages.push(e);
+      }
+    });
+  } else {
+    [x - 1, x, x + 1].forEach((e) => {
+      pages.push(e);
+    });
+  }
+  pages.sort((a, b) => a - b);
+  return pages;
+};
