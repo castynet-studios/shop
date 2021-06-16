@@ -17,7 +17,6 @@ export const PageWrap = styled.div`
 `;
 
 export const Button = styled.button`
-  display: ${(props) => (props.visible ? "inline-block" : "none")};
   width: 35px;
   height: 35px;
   margin: 0 5px;
