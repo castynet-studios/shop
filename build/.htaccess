@@ -1,1 +1,4 @@
-ErrorDocument 404 shop.genztech.xyz
+Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.html [QSA,L]
